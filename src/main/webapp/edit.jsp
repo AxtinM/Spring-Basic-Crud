@@ -9,18 +9,14 @@
 
     <link  href = "bootstrap.min.css"  rel = " stylesheet " >
 </head>
-<body>
-<p></p>
-
-<div class="container">
-    <div class="card">
+<body class="bg-dark">
+<div class="container bg-dark mt-5 text-white">
+	<h1 class="text-white">Editer un Produit &#9981</h1>
+    <div class="card bg-dark">
 
         <div class="card text-white bg-secondary">
-            <div class="card-header">
-                editer un produit
-            </div>
         </div>
-        <form action="edit-product?id=${produit.id}" method="post">
+        <form action="edit-product?id=${produit.id}" method="post" class="bg-dark">
 
             <div class="form-group">
 

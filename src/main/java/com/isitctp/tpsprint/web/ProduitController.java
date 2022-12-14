@@ -34,8 +34,13 @@ public class ProduitController {
     @GetMapping("/products")
     public String getListProducts(Model m){
         m.addAttribute("liste", pr.findAll());
-        m.addAttribute("categorie", cr.findAll());
         return "index";
+    }
+    
+    @GetMapping("/products-add")
+    public String addList(Model m){
+        m.addAttribute("categorie", cr.findAll());
+        return "add";
     }
 
     @GetMapping("/delete-product")

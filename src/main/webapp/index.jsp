@@ -6,31 +6,13 @@ pageEncoding="windows-1256"%>
 <head>
 <meta charset="ISO-8859-1">
 <title>Gestion Produit</title>
- 
  <link  href = "bootstrap.min.css"  rel = " stylesheet " >
 </head>
-<body>
-<p></p>
-    
-     <div class="container">
-         <%--<div class="card">
-                 <div class="card text-white bg-dark">
-                 <div class="card-header">
-                      Recherche des Produits
-                 </div>
-                 </div>
-
-                <form action="ProdMotCle" method="get">
-                      <div class="card-body">
-                          <label class="col-md-2">Mot cle</label>
-                          <input type="text" name="mc">
-                           <input type="submit" name="action" value="rechercher"class="btn btn-primary">
-                       </div>
-                 </form>
-            </div>
-           <c:if test="${LV==false }">--%>
+<body class="bg-dark">
+     <div class="container bg-dark mt-5">
+         <h1 class="text-white">List des Produits &#8987</h1>
               
-                <table class="table table-striped" style="width:1000px">
+                <table class="container table table-striped bg-dark text-white m-5" style="width:1000px">
                       <tr>
                            <th>id</th><th>Nom</th><th>prix</th> <th>categorie</th><th>Action</th>
                        </tr>
@@ -42,46 +24,17 @@ pageEncoding="windows-1256"%>
                              <td>${p.price}</td>
                              <td>${p.category.name}</td>
                              <td>
-                                 <a href="delete-product?id=${p.id}"class="btn btn-danger">Supprimer</a>
-                                 <a href="edit-products?id=${p.id}"class="btn btn-success">Modifer</a>
+                                 <a href="delete-product?id=${p.id}"class="btn btn-danger">&#10006</a>
+                                 <a href="edit-products?id=${p.id}"class="btn btn-success">&#9997</a>
                              </td>
                              
                          </tr>
                       </c:forEach>
                  
                   </table>
-            <%--</c:if>--%>
-<br>
 
-     <div class="card">
-                  
-                  <div class="card text-white bg-secondary">
-                     <div class="card-header">
-                        Ajouter un produit
-                    </div>
-                   </div>
-               <form action="add-product" method="post">
-               
-                    <div class="form-group">
-                    
-                          <label class="form-label">nom :</label>
-                          <input type="text" name="name" class="form-control car"><br>
-                          <label class="form-label">prix :</label>
-                          <input type="Number" name="price" class="form-control car"><br>
-                          
-                          <label class="form-label">Categorie</label>
-                          <select name="category">
-                               <c:forEach items="${categorie}" var="x">
-                                   <option value="${x.id}">"${x.name}"</option>
-                                </c:forEach>
-                          </select>
-                             <input type="submit" name="action" value="ajouter"class="btn btn-success">
-                          
-                      </div>
-                </form>
-         </div>
+				<hr class="border border-danger border-2 opacity-50 mb-5">
+				<a href="products-add"class="btn btn-info">Ajouter un Produit &#9989</a>
     </div>
-
-
 </body>
 </html>
